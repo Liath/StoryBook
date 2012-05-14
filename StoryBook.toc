@@ -1,0 +1,7 @@
+## Interface: 40300 
+## Title: StoryBook
+## Notes: Tell your raid a lovely story!
+## Version: 0.01      
+## Author: Liath
+## SavedVariables: StoryBookDB
+StoryBook.lua

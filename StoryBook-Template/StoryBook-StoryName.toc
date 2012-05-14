@@ -1,0 +1,6 @@
+## Interface: 40300 
+## Title: StoryBook - StoryName
+## Notes: StoryName for StoryBook!
+## Version: 0.01      
+## Author: YourName
+story.lua
