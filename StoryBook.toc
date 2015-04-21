@@ -1,7 +1,11 @@
-## Interface: 40300 
+## Interface: 60100
 ## Title: StoryBook
 ## Notes: Tell your raid a lovely story!
 ## Version: 0.01      
 ## Author: Liath
 ## SavedVariables: StoryBookDB
+## X-Curse-Packaged-Version: r20120514055042
+## X-Curse-Project-Name: StoryBook
+## X-Curse-Project-ID: storybook
+## X-Curse-Repository-ID: wow/storybook/mainline
 StoryBook.lua

@@ -1,19 +1,3 @@
--- Unless noted otherwise, all of my code in this project shall be licensed as follows:
--- 
--- Copyright 2013 John Jones <Liath@github>
---
--- Licensed under the Apache License, Version 2.0 (the "License");
--- you may not use this file except in compliance with the License.
--- You may obtain a copy of the License at
---
---    http://www.apache.org/licenses/LICENSE-2.0
---
--- Unless required by applicable law or agreed to in writing, software
--- distributed under the License is distributed on an "AS IS" BASIS,
--- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
--- See the License for the specific language governing permissions and
--- limitations under the License.
-
 -- ---------------------------- Setup ----------------------------
 StoryBook = LibStub("AceAddon-3.0"):NewAddon("StoryBook", "AceTimer-3.0")
 StoryBook:SetDefaultModuleState(false)
@@ -21,7 +5,7 @@ StoryBook:SetDefaultModuleState(false)
 if not StoryBookDB or not StoryBookDB.Output then 
 	StoryBookDB = {};
 	StoryBookDB.Enabled = false;
-	StoryBookDB.Rate = 12;		--Twelve seconds is usually a pretty smooth rate
+	StoryBookDB.Rate = 10;		--Ten seconds is usually a pretty smooth rate *winkyface*
 	StoryBookDB.Output = 'console';
 	StoryBookDB.OutputSpecial = '';
 	StoryBookDB.Line = 0;
@@ -194,6 +178,7 @@ function StoryBook.SetOutput(target)
 	for _,v in pairs(outputs) do
 		if (strlower(strsub(target, 0, strlen(v))) == v) then
 			output = v;
+			print("Output set to "..output..".");
 			break;
 		end
 	end
@@ -203,7 +188,7 @@ function StoryBook.SetOutput(target)
 	else
 		if output == "whisper" or output == "channel" then
 			if strsub(target, strlen(output)+1) == "" then
-				print("No "..output.." target was specified. Hafta add one after "..output..".");
+				print("No "..output.." target was specified. Hafta add one after \""..output.."\".");
 				return;
 			end
 			StoryBookDB.OutputSpecial = strsub(target, strlen(output)+1);
